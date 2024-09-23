@@ -187,7 +187,7 @@ void draw_board(Game *game_state, uint x_pos, uint y_pos, uint height, uint padd
     uint tile_size  = (height / TILES_Y);
     uint render_size = tile_size - padding * 2;
 
-    Board render_board = {};
+    Board render_board = game_state->board_state;
 
     // Only draw piece when it's not game over.
     if (game_state->game_over == false) apply_piece(*game_state, &render_board);
